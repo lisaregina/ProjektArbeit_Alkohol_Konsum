@@ -1,0 +1,21 @@
+// import React from 'react';
+
+// function convertToArray(fileName, separator) {
+   
+//    document.getComponentById(fileName, function(fileContent){
+        
+//         var resultArray = [];
+//         var textArray = fileContent.split(/(\r\n|\n|\r)/gm);
+//         for (var i = 0; i < textArray.length; i++) {
+    
+//             if (textArray[i].length > 1) {
+//                 var elementArray = textArray[i].split(separator);
+//                 elementArray.splice(elementArray.length - 1, 1);
+//                 resultArray.push(elementArray);
+//             } 
+//         } 
+//         console.log(resultArray);
+//         return(resultArray);
+//     }); 
+// } 
+
