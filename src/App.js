@@ -1,12 +1,14 @@
-import React from 'react';
+import React from 'react'
 import './App.css';
-import GetData from './components/GetData';
+import GetData from './GetData'
+
+
 
 function App() {
-
   return (
+    
     <div className="App">
-      <GetData />
+     < GetData />
     </div>
   );
 
