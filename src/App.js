@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css';
-import GetData from './GetData'
+import GetData from './GetData';
 
 
 

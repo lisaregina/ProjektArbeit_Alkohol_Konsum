@@ -1,48 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render } from '@testing-library/react';
 
 function GetData() {
-  constructor(props){
-    super(props)
-    this.state = {
-      loading: false,
-      dataItems: []
-    }
+  function componentDidMount(){
+    return fetch('drinks.csv').then((response) =>{
+      return response;                            //Achtung Baustelle!!
+    })
   }
+  
 
-  async function componentDidMount() {
+  function makeTable(data) {
 
-    const response = await fetch('drinks.csv')
-      .then(result => result.json())
-      .then(json => {
-        this.setState({
-          isLoaded: true,
-          dataItems: json,
-        })
-      })
+    document.getComponentById(data, function(fileContent){
+        
+         var resultArray = [];
 
-
+         var newLineArray = fileContent.map(elem => fileContent.split('\n')); 
+         
+         var splitArray = newLineArray.map(elem => {
+            for (var i = 0; i < newLineArray.length; i++) {
+                 var noCommaArray = splitArray.map(elem => newLineArray[i].split(","));
+                
+         } })
+         console.log(splitArray);
+         
+     }); 
   }
-
-  return (
-   // if ({ isLoaded, dataItems } = this.state) {
-    <p>Daten</p> //Damit kein Error wegen nichts rendern kommt
-      <ul>
-        {dataItems.map(items => (
-          <li>{dataItems.country}</li>
-          <li>{dataItems.beer}</li>
-          <li>{dataItems.spirit}</li>
-          <li>{dataItems.wine}</li>
-          <li>{dataItems.total}</li>
-        ))};
-      </ul>
-    // } else {
-    //   console.log("ERROR")
-    // }
+  return(
+    <p>data</p>
   )
 }
-
 export default GetData;
 
 
