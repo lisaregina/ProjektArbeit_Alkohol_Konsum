@@ -1,4 +1,5 @@
 import parse from 'csv-parse/lib/sync'
+import ReactDOM from 'react-dom';
 import React, { createContext, useState, useEffect } from 'react'
 
 
