@@ -8,6 +8,7 @@ import { render } from 'react-dom';
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <header className="App-header">
         <img src={logo} calssName="App-logo" alt="logo"/>
         <h1 className="App-title">Welcome to React </h1>
@@ -27,6 +28,10 @@ function App() {
         
 
          </header>
+=======
+      <h1>Data</h1>
+      <GetData></GetData>
+>>>>>>> dc3bb91e1d5dd2d018bba01808b8636bdb3ccc7e
     </div>
   );
 }
