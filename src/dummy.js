@@ -4,6 +4,6 @@ import {drinksContext} from './drinks-context'
 
 export default function Dummy(){
     const [getDrinksData, setDrinksData] = useContext(drinksContext)
-    return<h1>drink: {getDrinksData[0].drink}</h1>
+    return<h1>country: {getDrinksData[0].country}</h1>
     
 }

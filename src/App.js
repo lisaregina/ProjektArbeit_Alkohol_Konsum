@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 import logo from './logo.svg';
-import {DrinksProvider} from './drinks-context';
+import { DrinksProvider } from './drinks-context';
 import Dummy from "./dummy";
 import { render } from 'react-dom';
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} calssName="App-logo" alt="logo"/>
+        <img src={logo} className="App-logo" alt="logo"/>
         <h1 className="App-title">Welcome to React </h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -23,11 +23,13 @@ function App() {
           Learn React
         </a>
 
-         <DrinksProvider> <dummy/> </DrinksProvider> 
+         <DrinksProvider>
+           <Dummy/> 
+         </DrinksProvider> 
         
 
          </header>
-      <h1>Data</h1>
+      {/* <h1>Data</h1> */}
       {/* <GetData></GetData> */}
     </div>
   );
