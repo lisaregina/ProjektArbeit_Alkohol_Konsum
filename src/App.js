@@ -1,9 +1,10 @@
 import React from 'react'
 import './App.css';
 import logo from './logo.svg';
-import { DrinksProvider } from './drinks-context';
+
 import Dummy from "./dummy";
 import { render } from 'react-dom';
+
 
 function App() {
   return (
@@ -22,12 +23,9 @@ function App() {
         >
           Learn React
         </a>
-
-         <DrinksProvider>
+      
            <Dummy/> 
-         </DrinksProvider> 
         
-
          </header>
       {/* <h1>Data</h1> */}
       {/* <GetData></GetData> */}

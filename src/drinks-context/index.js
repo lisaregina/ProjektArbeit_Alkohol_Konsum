@@ -1,6 +1,8 @@
-import parse from 'csv-parse/lib/sync'
 import ReactDOM from 'react-dom';
+import parse from 'csv-parse/lib/sync'
 import React, { createContext, useState, useEffect } from 'react'
+import {rows, data} from './load-drink-data.test'
+
 
 
 export function loadDrinksData(){
@@ -11,20 +13,18 @@ export function loadDrinksData(){
 
 export const drinksContext = createContext()
 
-export function DrinksProvider(props){
-    const[getDrinksData, setDrinksData] = useState([{
-        
-    }])
+// export function DrinksProvider(props){
+// //     const[getDrinksData, setDrinksData] = useState(expect(data).toEqual(data)) 
 
-    useEffect(()=>{
-            loadDrinksData().then((country) =>{
-                setDrinksData(country)
-            })
-    })
-    return(
+// //     useEffect(()=>{
+// //             loadDrinksData().then((country) =>{
+// //                 setDrinksData(country)
+// //             })
+// //     })
+// //     return(
         
-            <drinksContext.Provider value ={[getDrinksData, setDrinksData]}>
-                {props.children}
-            </drinksContext.Provider>
-        )
-}
+// //             <drinksContext.Provider value ={[getDrinksData, setDrinksData]}>
+// //                 {props.children}
+// //             </drinksContext.Provider>
+// //         )
+//  }
