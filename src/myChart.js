@@ -1,29 +1,47 @@
-import React from 'react'
+import React, { useContext, useMemo } from 'react'
 import { Chart } from 'react-charts'
- 
+
+import { drinksContext } from './drinks-context'
+
 export default function MyChart() {
-  const data = React.useMemo(
+  const [drinksData] = useContext(drinksContext)
+  const beer_servings = drinksData.map((data) => {
+    return data.beer_servings
+  }).map((numString) => {
+    return parseInt(numString, 10)
+  }).sort(
+    (a, b) => { return a - b }
+
+  const tuples = beer_servings.map((number, index) => {
+    return [index, number]
+  })
+  console.log(beer_servings)
+
+  const data = useMemo(
     () => [
       {
         label: 'Series 1',
-        data: [[0, 1], [1, 2], [2, 4], [3, 2], [4, 7]]
-      },
-      {
-        label: 'Series 2',
-        data: [[0, 3], [1, 1], [2, 5], [3, 6], [4, 4]]
+        data: tuples
       }
     ],
-    []
+    [tuples]
   )
- 
-  const axes = React.useMemo(
+
+  const axes = useMemo(
     () => [
       { primary: true, type: 'linear', position: 'bottom' },
       { type: 'linear', position: 'left' }
     ],
     []
   )
- 
+
+  const series = useMemo(
+    () => ({
+      type: 'bar'
+    }),
+    []
+  )
+
   const lineChart = (
     // A react-chart hyper-responsively and continuously fills the available
     // space of its parent element automatically
@@ -33,7 +51,7 @@ export default function MyChart() {
         height: '300px'
       }}
     >
-      <Chart data={data} axes={axes} />
+      <Chart data={data} series={series} axes={axes} />
     </div>
   )
   return lineChart;
