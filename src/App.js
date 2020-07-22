@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 import logo from './logo.svg';
-import myChart  from './myChart'
+import MyChart  from './MyChart'
 import Dummy from "./dummy";
 import { render } from 'react-dom';
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
            <Dummy/>
-           <myChart/>
+           <MyChart/>
     </div>
   );
 }

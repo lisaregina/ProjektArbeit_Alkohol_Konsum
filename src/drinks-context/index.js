@@ -1,8 +1,6 @@
 import ReactDOM from 'react-dom';
 import parse from 'csv-parse/lib/sync'
 import React, { createContext, useState, useEffect } from 'react'
-import {rows, data} from './load-drink-data.test'
-
 
 
 export function loadDrinksData(){

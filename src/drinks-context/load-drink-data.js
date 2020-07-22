@@ -1,5 +1,5 @@
 import React from 'react'
-import parse from 'csv-parser/lib/sync'
+import parse from 'csv-parse/lib/sync'
 
 export default function loadDrinksData() {
     return fetch("/drinks.csv")

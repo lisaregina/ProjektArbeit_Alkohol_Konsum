@@ -5,13 +5,13 @@ import { drinksContext } from './drinks-context'
 
 export default function MyChart() {
   const [drinksData] = useContext(drinksContext)
-  const beer_servings = drinksData.map((data) => {
+  const beer_servings = (drinksData) ? drinksData.map((data) => {
     return data.beer_servings
   }).map((numString) => {
     return parseInt(numString, 10)
   }).sort(
     (a, b) => { return a - b }
-
+  ) : []
   const tuples = beer_servings.map((number, index) => {
     return [index, number]
   })

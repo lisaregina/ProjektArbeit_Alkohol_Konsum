@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import App from './App';
 import { drinksContext } from './drinks-context';
 import {readFileSync} from 'fs';
-import parse from 'csv-parser/lib/sync';
+import parse from 'csv-parse/lib/sync';
 
 describe('App', () => {
   it('should render all the time equally without data', () =>{
@@ -21,7 +21,7 @@ describe('App', () => {
     const json = parse(rawCsv, {
       columns: true
     })
-    console.log(json)
+    //console.log(json)
     let tree = (
       <drinksContext.Provider value={[json]}>
         <App />
