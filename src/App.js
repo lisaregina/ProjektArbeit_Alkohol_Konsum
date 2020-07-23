@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 import logo from './logo.svg';
-import MyChart  from './MyChart'
+import MyChart  from './myChart'
 import Dummy from "./dummy";
 import { render } from 'react-dom';
 
