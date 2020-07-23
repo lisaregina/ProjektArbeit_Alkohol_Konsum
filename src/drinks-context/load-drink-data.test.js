@@ -3,9 +3,6 @@ import React, { useContext } from 'react'
 import { drinksContext, DrinksProvider } from '.'
 import loadDrinksData from './load-drink-data'
 
-console.log('#####################', readFileSync)
-
-
 describe('drinks-context', () => {
 
     describe("loadDrinksData", () => {
