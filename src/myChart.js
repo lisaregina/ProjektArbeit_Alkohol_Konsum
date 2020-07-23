@@ -2,35 +2,19 @@ import React, { useContext, useMemo } from 'react'
 import { Chart } from 'react-charts'
 
 import { drinksContext } from './drinks-context'
+import { prepareForReactCharts, extractBeer_Servings } from './chart-helper'
 
 export default function MyChart() {
   const [drinksData] = useContext(drinksContext)
-  const beer_servings = (drinksData) ? drinksData.map((data) => {
-    return data.beer_servings
-  }).map((numString) => {
-    return parseInt(numString, 10)
-  }).sort(
-    (a, b) => { return a - b }
-  ) : []
-  const tuples = beer_servings.map((number, index) => {
-    return [index, number]
-  })
-  console.log(beer_servings)
-
   const data = useMemo(
-    () => [
-      {
-        label: 'Series 1',
-        data: tuples
-      }
-    ],
-    [tuples]
+    () => prepareForReactCharts("Series 1", extractBeer_Servings(drinksData)),
+    [drinksData]
   )
 
   const axes = useMemo(
     () => [
       { primary: true, type: 'linear', position: 'bottom' },
-      { type: 'linear', position: 'left' }
+      { primary: false, type: 'linear', position: 'left' }
     ],
     []
   )
