@@ -4,7 +4,7 @@ import { Chart } from 'react-charts'
 import { drinksContext } from './drinks-context'
 import { prepareForReactCharts, extractBeer_Servings } from './chart-helper'
 
-export default function MyChart() {
+export default function MyChart() {  
   const [drinksData] = useContext(drinksContext)
   const data = useMemo(
     () => prepareForReactCharts("Series 1", extractBeer_Servings(drinksData)),

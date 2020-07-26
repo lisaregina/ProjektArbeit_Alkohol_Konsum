@@ -28,7 +28,7 @@ describe('App', () => {
       </drinksContext.Provider>
     )
     const {container} = render(tree);
-    expect(container).toMatchSnapshot();
+    expect(container).toMatchSnapshot(); 
   });
 })
 
