@@ -17,6 +17,18 @@ export function extractWine_Servings(input) {
     }) : []
 }
 
+// Spirits
+export function extractSpirit_Servings(input) {
+    return input ? input.map((entry) => {
+        return entry.spirit_servings
+    })
+    .map((numString) => {
+        return parseInt(numString,10)
+    }) : []
+}
+
+
+
 export function prepareForReactCharts (label, rawData) {
     return [ {
         label,
