@@ -16,14 +16,12 @@ describe('ChartJSTest', () =>{
         const data = await loadDrinksData();
         
         const countries= [];
-        data.forEach(obj => {
-            if(obj.hasOwnProperty("country") == true){
-            countries.push(Object.key.country)
+       data.forEach(Object => {
+            if(Object.hasOwnProperty("country") == true){
+            countries.push(Object.values("country")
             }else {[]}
         })
-        console.log(countries);
-
+        console.log(countries)
         
-        // expect().toEqual(labels)
-    })
+      expect(labels).toEqual(countries)
 })
