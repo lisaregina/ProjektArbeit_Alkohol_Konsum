@@ -1,10 +1,13 @@
 import React from 'react'
 import './App.css';
 import logo from './logo.svg';
-import MyChart  from './myChart'
-import Dummy from "./dummy";
 import { render } from 'react-dom'; 
+
+// components
 import ChartJsTest from './ChartJsTest';
+import Dummy from "./dummy";
+import Avg from './avg';
+// import MyChart  from './myChart'
 
 
 function App() {
@@ -13,7 +16,7 @@ function App() {
            <Dummy/>
            {/* <MyChart/> */}
            <ChartJsTest/>
-
+           <Avg />
     </div>
   );
 }

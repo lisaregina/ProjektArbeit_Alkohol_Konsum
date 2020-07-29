@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+#beer {
+  color:rgba(0, 204, 0, 1);
+}
+
+#wine {
+  color:rgba(255, 99, 132, 1);
+}
+
+#spirit{
+  color: rgba(153, 51, 153, 1);
+}
