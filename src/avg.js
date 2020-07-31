@@ -40,32 +40,6 @@ export default function Avg(){
         avg.total.consumptionOverall = Math.round((avg.total.consumptionOverall + parseFloat(country.total_litres_of_pure_alcohol)) * 100) / 100;
         avg.total.averageConsumption = Math.round((avg.total.consumptionOverall / getDrinksData.length) * 100) / 100;
     });
-/*
-    const data = {
-        labels: [
-            "Beer",
-            "Wine",
-            "Spirits"
-        ],
-        datasets: [{
-            label: "Average Consumption",
-            backgroundColor: "rgba(255,210,0,0.5)",
-            pointBackgroundColor: "rgb(151,187,205)",
-            data: [
-                avg.beer.averageConsumption,
-                avg.wine.averageConsumption,
-                avg.spirit.averageConsumption
-            ]
-        }]
-    }
-    const options = {
-        beginAtZero: true,
-    }
-
-
-    <Radar data={data} options={options}/>
-*/
-
 
     return <div>
         <h1>Ø Average Consumption</h1>
