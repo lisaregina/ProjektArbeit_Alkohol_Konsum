@@ -27,7 +27,25 @@ export function extractSpirit_Servings(input) {
     }) : []
 }
 
+export function extractTotal_Serving(input){
+    return input ? input.map((entry) => {
+        return entry.total_litres_of_pure_alcohol
+    })
+    .map((numString) => {
+        return parseInt(numString,10)
+    }) : []
+}
 
+export function extractLabels (data) {
+    return data ? data.map((entry)=>{
+        return entry.country
+    })
+    .map((dataString) =>{
+        return Array.from(dataString)
+    }) : []
+ }
+
+ 
 
 export function prepareForReactCharts (label, rawData) {
     return [ {
@@ -37,3 +55,4 @@ export function prepareForReactCharts (label, rawData) {
         })
     }]
 }
+
