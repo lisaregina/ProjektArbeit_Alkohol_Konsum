@@ -4,6 +4,7 @@ import { drinksContext } from './drinks-context'
 import {extractBeer_Servings} from './chart-helper'
 import {extractWine_Servings} from './chart-helper'
 import {extractSpirit_Servings} from './chart-helper'
+import {extractLabels} from './chart-helper'
 //import * as ChartAnnotation from 'chartjs-plugin-annotation';//
 
 //Chart.plugins.register([ChartAnnotation]); // 
@@ -13,11 +14,9 @@ import {extractSpirit_Servings} from './chart-helper'
 export default function ChartJsTest(){
     const [drinksData] = useContext(drinksContext)
 
-    const labels = drinksData ? drinksData       //dafür bitte noch einen neuen test schreiben
-        .map((entry) =>{
-            return entry.country
-        })
-    : []
+    const labels = extractLabels(drinksData)  
+    console.log(labels)
+
     return <Bar data= {{
         labels: labels,
         datasets: [{
