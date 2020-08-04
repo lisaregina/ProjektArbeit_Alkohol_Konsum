@@ -5,11 +5,6 @@ import {extractBeer_Servings, extractTotal_Serving} from './chart-helper'
 import {extractWine_Servings} from './chart-helper'
 import {extractSpirit_Servings} from './chart-helper'
 import {extractLabels} from './chart-helper'
-//import * as ChartAnnotation from 'chartjs-plugin-annotation';//
-
-//Chart.plugins.register([ChartAnnotation]); // 
- 
-
 
 export default function ChartJsTest(){
     const [drinksData] = useContext(drinksContext)

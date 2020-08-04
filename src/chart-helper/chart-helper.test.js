@@ -2,6 +2,10 @@ import {
     extractBeer_Servings,
     prepareForReactCharts
 } from '.'
+import {
+    extractWine_Servings,
+} from '.'
+
 describe('chart-helper', () => {
     describe('extractBeer_Servings', () => {
         it('should return empty list on empty input', () => {
@@ -36,10 +40,6 @@ describe('chart-helper', () => {
     })
 //wine 
 
-import {
-    extractWine_Servings,
-    prepareForReactCharts
-} from '.'
 describe('chart-helper', () => {
     describe('extractWine_Servings', () => {
         it('should return empty list on empty input', () => {
