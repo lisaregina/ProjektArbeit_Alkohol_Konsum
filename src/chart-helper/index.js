@@ -39,9 +39,6 @@ export function extractTotal_Serving(input){
 export function extractLabels (data) {
     return data ? data.map((entry)=>{
         return entry.country
-    })
-    .map((dataString) =>{
-        return Array.from(dataString)
     }) : []
  }
 
