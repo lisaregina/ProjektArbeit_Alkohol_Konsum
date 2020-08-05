@@ -6,4 +6,3 @@ export default function loadDrinksData() {
         .then((response) => response.text())
         .then((text) => parse(text, { columns: true }))
 }
-// test versuch

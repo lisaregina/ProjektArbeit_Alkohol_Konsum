@@ -10,11 +10,11 @@ describe('drinks-context', () => {
             const csvContent = readFileSync(__dirname + "/../../public/drinks.csv", "utf-8")
             const rows = csvContent.split('\n')
             const labels = rows[0].split(',').map((label) => label.trim())
-            // console.log('????', labels);
+
             fetch.mockResponseOnce(csvContent)
 
             const data = await loadDrinksData();
-            // console.log(data)    
+
             expect(data.length).toEqual(rows.length - 1)
             data.forEach(drink => {
                 expect(Object.keys(drink)).toEqual(labels)

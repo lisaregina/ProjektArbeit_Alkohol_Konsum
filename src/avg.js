@@ -27,16 +27,15 @@ export default function Avg(){
     
 
     getDrinksData.forEach(country => {
-        // beer
         avg.beer.consumptionOverall = avg.beer.consumptionOverall + parseFloat(country.beer_servings);
         avg.beer.averageConsumption = Math.round((avg.beer.consumptionOverall / getDrinksData.length) * 100) / 100;
-        // wine
+        
         avg.wine.consumptionOverall = avg.wine.consumptionOverall + parseFloat(country.wine_servings);
         avg.wine.averageConsumption = Math.round((avg.wine.consumptionOverall / getDrinksData.length) * 100) / 100;
-        // spirit
+        
         avg.spirit.consumptionOverall = avg.spirit.consumptionOverall + parseFloat(country.spirit_servings);
         avg.spirit.averageConsumption = Math.round((avg.spirit.consumptionOverall / getDrinksData.length) * 100) / 100;
-        // total
+        
         avg.total.consumptionOverall = Math.round((avg.total.consumptionOverall + parseFloat(country.total_litres_of_pure_alcohol)) * 100) / 100;
         avg.total.averageConsumption = Math.round((avg.total.consumptionOverall / getDrinksData.length) * 100) / 100;
     });

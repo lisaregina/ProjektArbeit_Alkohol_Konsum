@@ -3,7 +3,7 @@ import { drinksContext } from "./drinks-context"
 import loaddrinksData from './drinks-context/load-drink-data'
 import App from './App'
 
-export default function Main() {                     //so wenig wie möglich reinschreiben! Sehr gefährlich!
+export default function Main() {
     const [drinksData, setdrinksData] = useState([])
 
     useEffect(() => {
